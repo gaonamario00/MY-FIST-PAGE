@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <script type= "module">
+     import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+     window.alertController = alertController;
+     </script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Presupuesto</title>
+ <!-- Aqui se pondran las dependecias necesiarias -->
+ <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+ <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+ </head>
+ <body>
+ <!-- Aqui pondremos los elementos de la patalla de nuestra app -->
+ <ion-app>
+     <ion-header>
+         <ion-toolbar color="primary">
+            <ion-title>PRESUPUESTO</ion-title>
+         </ion-toolbar>
+     </ion-header>
+     <ion-content>
+         <!-- Aqui pondremos el contenido de la pantalla-->
+        <ion-grid>
+            <ion-row>
+                <ion-col size-md="7" offset-md="3">
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-title>Nuevo Gasto</ion-card-title>
+                        </ion-card-header>
+                        <ion-card-content>
+                            <ion-item>
+                                <ion-label position="floating">Tipo de Gasto</ion-label>
+                                <ion-input id="input-tipo" type="text"></ion-input>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label position="floating">Monto</ion-label>
+                                <ion-input id="input-monto" type="number"></ion-input>
+                            </ion-item>
+                            <div class="ion-text-right ion-margin-vertical" >
+                                <ion-button id="btn-guardar" fill="outline" color="danger">Guardar</ion-button>
+                            </div>
+                        </ion-card-content>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size-md="6" offset-md="3">
+                    <ion-list id="list-gastos"></ion-list>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size-md="6" offset-md="3">
+                    <h2>Total $<span id="output-total"></span></h2>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+     </ion-content>
+     <ion-alert-controller></ion-alert-controller>
+     <IonFooter>
+        <IonToolbar color="danger">
+          <IonTitle>Mario Alberto Gaona Gallegos 1899495</IonTitle>
+        </IonToolbar>
+      </IonFooter>
+ </ion-app>
+ <script src="app.js"></script>
+ </body>
+ </html>
